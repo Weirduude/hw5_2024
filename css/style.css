@@ -1,0 +1,40 @@
+body {
+    font-family: "Poppins", serif; /* Poppins with serif as backup */
+    background-color: #f1f1f1; /* background color */
+    background-image: url('concrete_seamless.png'); /* Background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-attachment: fixed; /* Fix the background in place */
+}
+
+header {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;     
+}
+
+/* direct child */
+.card > header {
+    background-color: #288088;         
+    border: 2px solid #45ADAD;        
+    padding: 20px 0;                 
+    border-top-left-radius: 50px;      
+    border-top-right-radius: 50px;     
+}
+
+.card {
+    display: flex;
+    flex-direction: column;  
+    flex-basis: 450px;               
+    width: 100%;                    
+}
+
+.pricing {
+    display: flex;
+    justify-content: center; 
+    align-content: center;
+    align-items: center;  
+    justify-items: center;  
+    flex-wrap: wrap;    
+    background-color: #f9f9f9;
+}
