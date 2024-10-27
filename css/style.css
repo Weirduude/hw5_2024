@@ -13,7 +13,6 @@ header {
     align-items: center;     
 }
 
-/* direct child */
 .card > header {
     background-color: #288088;         
     border: 2px solid #45ADAD;        
@@ -37,4 +36,136 @@ header {
     justify-items: center;  
     flex-wrap: wrap;    
     background-color: #f9f9f9;
+}
+
+@keyframes growLogo {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+#logo {
+    animation: growLogo 5s ease-in-out forwards;
+}
+
+.gallery img{
+    border: 10px solid  #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+    header {
+        display: flex;  
+        flex-direction: row;
+        justify-content: space-between;  
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;  
+        flex-basis: 275px;               
+        width: 100%;                    
+    }
+
+    header:not(main header) {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100; 
+        padding: 15px 0; 
+    }
+
+    body {
+        padding-top: 150px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo {
+        animation: none; 
+        width: 475px; 
+        opacity: 1; 
+    }
+}
+
+@media print {
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    header {
+        display: flex;  
+        flex-direction: column;
+        justify-content: space-between;  
+    }
+
+    .nav_links {
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav_item{
+        margin: 0 100px;
+    }
+
+    .pricing {
+        display: flex;
+        align-items: flex-end; 
+    }
+
+    .card {
+        border: 2px solid #45ADDD; 
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        display: flex;
+        /* flex-direction: column; */
+        flex-basis: 29.5%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #gallery {
+        display: none;
+    }
+    .gallery {
+        display: none;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+ .pricing .card ul li:nth-child(2)::after {
+        content: "👍 "; /* Thumbs up emoji */
+        color: yellow; /* Optional: set the color */
+        font-size: 1em; /* Adjust size if needed */
+    }
+    
 }
