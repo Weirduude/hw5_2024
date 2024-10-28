@@ -89,7 +89,6 @@ header {
         top: 0;
         width: 100%;
         z-index: 100; 
-        padding: 15px 0; 
     }
 
     body {
@@ -123,32 +122,31 @@ header {
         flex-direction: column;
         justify-content: space-between;  
     }
+    
+    nav {
+        width: 100%;
+    }
 
     .nav_links {
         display: flex;
-        /* flex-wrap: wrap; */
+        width: 100%;
         flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .nav_item{
-        margin: 0 100px;
+        justify-content: space-evenly;
+        
     }
 
     .pricing {
         display: flex;
-        align-items: flex-end; 
+        align-items: flex; 
+        flex-wrap: nowrap;
     }
 
     .card {
         border: 2px solid #45ADDD; 
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-        display: flex;
-        /* flex-direction: column; */
-        flex-basis: 29.5%;
+        flex-basis: 325px;
         flex-wrap: wrap;
-        justify-content: space-evenly;
     }
 
     #gallery {
@@ -158,14 +156,14 @@ header {
         display: none;
     }
 
-    footer {
-        margin-top: 100px;
+    .pricing .card ul li:nth-child(2)::after {
+        content: "👍 "; 
+        color: yellow; 
+        font-size: 1em; 
     }
 
- .pricing .card ul li:nth-child(2)::after {
-        content: "👍 "; /* Thumbs up emoji */
-        color: yellow; /* Optional: set the color */
-        font-size: 1em; /* Adjust size if needed */
+    footer {
+        margin-top: 300px;
     }
     
 }
